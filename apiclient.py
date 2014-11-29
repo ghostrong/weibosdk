@@ -2,7 +2,7 @@
 
 ''' Sina Weibo SDK powered by requests (http://docs.python-requests.org/en/latest/)
 This is perfectly for weibo-application (not crawler).
-If you are intereted in crawl weibo data, you may like this instead:
+If you are intereted in crawling weibo data, you may like this instead:
     https://github.com/ghostrong/weibo-crawler
 Author: Xiaosong Rong
 Email: rongxiaosong@gmail.com
@@ -143,7 +143,7 @@ class APIClient(object):
         print u'Open the following url to any browser: \n'
         print manual_url
         # code, acquired from the redirect url
-        code = raw_input('\nInput the code: #copy your code \n')
+        code = raw_input('\nInput the code:  # copy and paste your code here\n')
         r = _http_call(self.auth_url+'access_token',
                 _HTTP_POST,
                 client_id=self.APP_KEY,

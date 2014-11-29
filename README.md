@@ -38,12 +38,13 @@ get weibo user's profile:
 ```
 >>> from apiclient import APIClient
 >>> api = APIClient()
+>>> api.config_from_object()
 Request new token...
 Open the following url to any brower:
 
 https://api.weibo.com/oauth2/authorize?action=submit&response_type=code&redirect_uri=...
 
-Input the code:  #copy your code
+Input the code:
 xxxxxxxxxxxxx
 
 >>> user = api.call('users/show', uid=1990786715)
@@ -56,7 +57,7 @@ Tips
 
 Request new token will take some manual work:
 
-  Open the url in any browser, after your authorize, you will see the redirect url like this:
+  Open the url in any browser, after your authorization, you will see the redirect url like this:
 
     http://somedomain/?code=xxxxxx
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #coding=utf8
 
 
@@ -37,9 +38,7 @@ class WeiboExp(APIClient):
 
 if __name__ == '__main__':
     api = WeiboExp()
-    api.set_access_token('xxxx')
-    import time
+    api.config_from_object()
+    # api.set_access_token('your-access-token')
     r = api.get_user_by_id(1990786715)
-    # r = api.update_status( u'测试我的post ----- %s' % time.ctime() )
-    # r = api.update_status_with_pic(u'皮卡丘-pikaqiu -- %s'.encode('utf8') % time.ctime(), 't.jpg')
     print r
